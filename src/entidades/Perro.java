@@ -10,15 +10,27 @@ public class Perro {
     private String raza;
     private int edad;
     private String tamanio;
+    private boolean adoptado;
+
+   
 
     public Perro() {
     }
 
-    public Perro(String nombre, String raza, int edad, String tamanio) {
+    public Perro(String nombre, String raza, int edad, String tamanio, boolean adoptado) {
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
         this.tamanio = tamanio;
+        this.adoptado = adoptado;
+    }
+
+   public boolean isAdoptado() {
+        return adoptado;
+    }
+
+    public void setAdoptado(boolean adoptado) {
+        this.adoptado = adoptado;
     }
 
     public String getNombre() {
@@ -55,8 +67,10 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + '}';
+        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + ", adoptado=" + adoptado + '}';
     }
+
+    
  
     
 }
